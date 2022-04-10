@@ -1,23 +1,24 @@
 {
-  "log":{
-    "loglevel": "warning",
-    "access": "/var/log/v2ray/access.log",
-    "error": "/var/log/v2ray/error.log"
+  "log": {
+    "loglevel": "warning"
   },
   "inbound": {
     "port": 48212,
-    "protocol": "vmess",   
+    "listen": "0.0.0.0",
+    "protocol": "vmess",
+    "tag": "vmess-inbound",
     "settings": {
       "clients": [
         {
-          "id": "7d99e20e-a0b6-4cfb-b736-afe7c5610a51",  
+          "id": "2d1fc0f8-3296-4c2e-bf36-ba4e5e36505b",
           "alterId": 64
         }
       ]
     }
   },
   "outbound": {
-    "protocol": "freedom",  
+    "tag": "direct",
+    "protocol": "freedom",
     "settings": {}
   }
 }
